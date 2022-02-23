@@ -1,0 +1,24 @@
+<div class="jumbotron mt-5 div-form">
+    <h1 class="heading">{{ titulo }}</h1>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div [hidden]="!ocultar">
+                <input type="number" class="form-control form-control-lg input" (change)="searchUsers()" placeholder="Buscar..." [(ngModel)]="idUser || estado" name="idUser">
+                <div class="div-a">
+                    <a class="a" (click)="nuevoForm('c')"><u>Editar</u></a>
+                    <a class="a" (click)="nuevoForm('a')"><u>Nuevo</u></a>
+                </div>
+            </div>
+            <form [hidden]="ocultar" (ngSubmit)="createUser(updUser.id)" name="myForm">
+                <div class="form-group" >
+                    <input type="text" [(ngModel)]="user.email || updUser.email"  name="email" class="form-control input-form" placeholder="E-mail" required>
+                    <input type="text" [(ngModel)]="user.first_name  || updUser.first_name" class="form-control input-form" name="first_name" placeholder="Nombre" required>
+                    <input type="text" [(ngModel)]="user.last_name || updUser.last_name" class="form-control input-form" name="last_name" placeholder="Apellido" required>
+                    <input type="text" [(ngModel)]="user.avatar || updUser.avatar" class="form-control input-form" name="avatar" placeholder="Url de imagen" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Guardar</button>
+                <a class="div-a" style="cursor: pointer;" (click)="nuevoForm('b')"><u>Retornar</u></a>
+            </form>
+        </div>
+    </div>
+  </div>

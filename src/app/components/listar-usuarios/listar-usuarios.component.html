@@ -1,0 +1,21 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col mt-5" *ngFor="let users of listaUsuarios">
+        <div class="card card-user h-100">
+            <img src="{{ users.avatar }}" (click)="getDataUpdate(users)" height="500px" class="card-img-top img">
+            <div class="card-body">
+                <div class="flex-1">
+                    <h5 class="card-title">{{ users.first_name + ' ' + users.last_name }}</h5>
+                    <a>
+                        <img width="25px" src="../../../assets/img/edit.gif"/>
+                    </a> 
+                </div>
+                <div class="flex-2">
+                    <p class="card-text">{{ users.email }}</p>
+                    <a style="cursor: pointer;" (click)="delete(users.id)">
+                        <img width="25px" src="../../../assets/img/delete.png"/>
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

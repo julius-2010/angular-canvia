@@ -1,0 +1,5 @@
+<!-- <app-navbar [titulo]="'Canvia Perú'"></app-navbar> -->
+<div class="container mg-4">
+    <app-formulario [updUser]="updUser" [estado]="estado" (userSeleccionados)="searchUsers($event)" (newUser)="createUser($event)"></app-formulario>
+    <app-listar-usuarios [listaUsuarios]="listaUsuarios" (deleteUser)="deleteUser($event)" (getUserUpdate)="getDataUpdate($event)"></app-listar-usuarios>
+</div>

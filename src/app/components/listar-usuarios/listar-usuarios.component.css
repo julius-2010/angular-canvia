@@ -1,0 +1,17 @@
+.flex-1 {
+    display: flex;
+  }
+
+.flex-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-user {
+  box-shadow: 0px 0px 30px rgba(190, 199, 204, 0.432); 
+  border-radius: 10px;
+}
+
+.img {
+  cursor: pointer;
+}
